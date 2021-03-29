@@ -42,7 +42,6 @@ Control Buttons
 
 .. _angular-lsn3-exercise-solutionsB1:
 
-
 #. Add an event listener to the *Take Off* button.
 
    ``app.component.html``:
@@ -53,3 +52,19 @@ Control Buttons
       <button (click) = "handleTakeOff()">Take Off</button>
 
 :ref:`Back to the exercises <exercises-angular-lsn3B>`
+
+
+Movement Buttons
+^^^^^^^^^^^^^^^^
+.. _angular-lsn3-exercise-solutionsC1:
+
+#. Label the ``img`` element so we can reference it:
+
+   ``app.component.html``
+
+   .. sourcecode:: html+ng2
+      :linenoe-start: 20
+
+      <img #rocketImage src="assets/images/LaunchCode_rocketline_white.png" height = "75" width = "75" [style.left]="0" [style.bottom]="0"/>
+
+:ref:`Back to the exercises <exercises-angular-lsn3C>`

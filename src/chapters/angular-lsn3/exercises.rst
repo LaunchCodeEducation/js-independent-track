@@ -123,6 +123,8 @@ These listeners will reassign the values of ``color``, ``height``, ``width``, an
 
 #. Follow the same pattern to handle the *Land* and *Abort Mission* click events.
 
+.. _exercises-angular-lsn3C:
+
 Movement Buttons
 ^^^^^^^^^^^^^^^^
 
@@ -139,11 +141,10 @@ But now, instead of using the ``getElementById`` method, we'll
 access the ``img`` element by passing it in to the click
 event.
 
-#. In ``app.component.html``, label the ``img`` element so we can reference it:
+#. In ``app.component.html``, label the ``img`` element so we can reference it.
 
-   .. sourcecode:: html+ng2
+   :ref:`Check your solution <angular-lsn3-exercise-solutionsC1>`.
 
-      <img #rocketImage src="assets/images/LaunchCode_rocketline_white.png" height = "75" width = "75" [style.left]="0" [style.bottom]="0"/>
 
 #. While you're here, add the click handler to the *Right* button:
 
