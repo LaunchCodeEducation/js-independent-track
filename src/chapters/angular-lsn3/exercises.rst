@@ -72,29 +72,28 @@ update the view.
       message = 'Space shuttle ready for takeoff!';
    }
 
+.. _exercises-angular-lsn3A:
+
 Update the HTML
 ^^^^^^^^^^^^^^^
 
-#. In ``app.component.html``, change line 5 to pass in the ``message`` variable.
+#. Pass in the ``message`` variable to the app html:
 
-#. Change line 19 to the following:
+   :ref:`Check your solution <angular-lsn3-exercise-solutionsA1>`.
 
-   .. sourcecode:: html+ng2
+#. Add this style directive to line 19: ``[style.backgroundColor]="color"``.
 
-      <div class="shuttle-background" [style.backgroundColor]="color">
+#. Use the ``height`` property to determine the displayed height. 
 
-#. Use the ``height`` property to determine the displayed height. Change line 31 as follows;
-
-   .. sourcecode:: html+ng2
-
-      <p>{{height}} km</p>
+   :ref:`Check your solution <angular-lsn3-exercise-solutionsA3>`.
 
 #. Refresh the page to ensure your template variables are assigned correctly.
 
-:ref:`Check your solution <angular-lsn3-exercise-solutionsA>`.
 
 Add Events to Modify Directives
 -------------------------------
+
+.. _exercises-angular-lsn3B:
 
 Control Buttons
 ^^^^^^^^^^^^^^^
@@ -102,13 +101,12 @@ Control Buttons
 Now, we'll add some event listeners to the three control buttons on the bottom of the page. 
 These listeners will reassign the values of ``color``, ``height``, ``width``, and ``message``.
 
-#. In ``app.component.html``, add an event listener to the *Take Off* button.
+#. Add an event listener to the *Take Off* button.
 
-   .. sourcecode:: html+ng2
-   
-      <button (click) = "handleTakeOff()">Take Off</button>
+   :ref:`Check your solution <angular-lsn3-exercise-solutionsB1>`.
 
-#. Back in ``app.component.ts``, we'll define this listener. The ``confirm()`` method will look the same as before, but this time we can use a few less lines of code to update the view.
+#. Back in ``app.component.ts``, we'll define this listener. The ``confirm()`` method will look the 
+   same as before, but this time we can use a few less lines of code to update the view.
 
    .. sourcecode:: TypeScript
       :linenos:
