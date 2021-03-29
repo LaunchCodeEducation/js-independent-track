@@ -26,4 +26,5 @@ Exercise Solutions
    fetch
    typescript
    angular-lsn2
+   angular-lsn3
    

@@ -1,26 +1,22 @@
+.. _exercises-angular-lsn3:
+
 Exercises: Angular, Part 3
-===========================
+==========================
 
 Remember that :ref:`DOM and Events studio <DOM-studio>`? Let's
 revisit this and do it again Angular-style.
 
 Starter Code
--------------
+------------
 
 The starter code for the exercises is in the same
 `repository <https://github.com/LaunchCodeEducation/angular-lc101-projects>`__
 that you cloned for the all of the Angular lessons.
 
-From the ``lesson3`` folder in VSCode, navigate into the
-``exercises/src/app/`` folder. Open the
-``app.component.html`` and ``app.component.ts`` files.
-
-In the terminal, navigate into the lesson 3 ``exercises`` folder. Enter
-``npm install`` to add the Angular modules, then run ``ng serve``. When you
-open the web page in your browser, it should look like this:
+When the project is running, it should look like this:
 
    .. figure:: ./figures/lesson3-exercises-initial-view.png
-      :alt: Initial view of the exercises app.
+      :alt: Initial view of the Angular lesson 3 exercises application in a browser.
 
    Initial view of the exercises app
 
