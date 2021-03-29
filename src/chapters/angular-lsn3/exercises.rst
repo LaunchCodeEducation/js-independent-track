@@ -75,11 +75,7 @@ update the view.
 Update the HTML
 ^^^^^^^^^^^^^^^
 
-#. In ``app.component.html``, change line 5 to make use of ``message``:
-
-   .. sourcecode:: html+ng2
-
-      <p>{{message}}</p>
+#. In ``app.component.html``, change line 5 to pass in the ``message`` variable.
 
 #. Change line 19 to the following:
 
@@ -94,6 +90,8 @@ Update the HTML
       <p>{{height}} km</p>
 
 #. Refresh the page to ensure your template variables are assigned correctly.
+
+:ref:`Check your solution <angular-lsn3-exercise-solutionsA>`.
 
 Add Events to Modify Directives
 -------------------------------
