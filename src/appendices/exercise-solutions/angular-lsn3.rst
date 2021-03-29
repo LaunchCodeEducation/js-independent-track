@@ -60,11 +60,61 @@ Movement Buttons
 
 #. Label the ``img`` element so we can reference it:
 
-   ``app.component.html``
+   ``app.component.html``:
 
    .. sourcecode:: html+ng2
-      :linenoe-start: 20
+      :lineno-start: 20
 
       <img #rocketImage src="assets/images/LaunchCode_rocketline_white.png" height = "75" width = "75" [style.left]="0" [style.bottom]="0"/>
 
+.. _angular-lsn3-exercise-solutionsC3:
+
+3. Complete the ``moveRocket()`` method in the app's component class to handle rocket movement to the right:
+
+   ``app.component.ts``:
+
+   .. sourcecode:: TypeScript
+      :lineno-start: 25
+
+      moveRocket(rocketImage, direction) {
+         if (direction === 'right') {
+            let movement = parseInt(rocketImage.style.left) + 10 + 'px';
+            rocketImage.style.left = movement;
+            this.width = this.width + 10000;
+         }
+      }
+
 :ref:`Back to the exercises <exercises-angular-lsn3C>`
+
+
+New Requirements
+----------------
+
+.. _angular-lsn3-exercise-solutionsD1:
+
+#. Add a check for the take off status of the shuttle:
+
+   ``app.component.ts``:
+
+   .. sourcecode:: TypeScript
+      :lineno-start: 15
+
+      takeOffEnabled: boolean = true;
+
+.. _angular-lsn3-exercise-solutionsD3:
+
+3. Use ``*ngIf`` and ``takeOffEnabled`` to determine which movement buttons are disabled.
+
+   ``app.component.html``:
+
+   .. sourcecode:: html+ng2
+      :lineno-start: 26
+
+      <div *ngIf="!takeOffEnabled">
+         <button (click)="moveRocket(rocketImage, 'up')">Up</button>
+         <button (click)="moveRocket(rocketImage, 'down')">Down</button>
+         <button (click)="moveRocket(rocketImage, 'right')">Right</button>
+         <button (click)="moveRocket(rocketImage, 'left')">Left</button>
+      </div>
+
+:ref:`Back to the exercises <exercises-angular-lsn3D>`

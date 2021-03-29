@@ -146,24 +146,11 @@ event.
    :ref:`Check your solution <angular-lsn3-exercise-solutionsC1>`.
 
 
-#. While you're here, add the click handler to the *Right* button:
+#. While you're here, add this click handler to the *Right* button: ``(click)="moveRocket(rocketImage, 'right')"``
 
-   .. sourcecode:: html+ng2
+#. Complete the ``moveRocket()`` method in the app's component class to handle rocket movement to the right:
 
-      <button (click)="moveRocket(rocketImage, 'right')">Right</button>
-
-#. Now in ``app.component.ts`` we can write the ``moveRocket()``:
-
-   .. sourcecode:: TypeScript
-      :linenos:
-
-      moveRocket(rocketImage, direction) {
-         if (direction === 'right') {
-         let movement = parseInt(rocketImage.style.left) + 10 + 'px';
-         rocketImage.style.left = movement;
-         this.width = this.width + 10000;
-         }
-      }
+   :ref:`Check your solution <angular-lsn3-exercise-solutionsC3>`.
 
 #. Add conditional logic to this ``moveRocket()`` method to account for the other movement
    directions, modifying the movement formula as needed. Be sure to also update the
@@ -181,6 +168,8 @@ handlers and add the following:
 
    rocketImage.style.bottom = '0px';
 
+.. _exercises-angular-lsn3D:
+
 New Requirements
 ----------------
 
@@ -191,27 +180,13 @@ New Requirements
 
    In ``app.component.ts``, let's add a check for the take off status of the shuttle.
 
-   .. sourcecode:: TypeScript
-
-      takeOffEnabled: boolean = true;
+   :ref:`Check your solution <angular-lsn3-exercise-solutionsD1>`.
 
 #. When the app is first loaded, we want the user to be able to click the *Take Off*
-   button, but not the *Land* or *Abort Mission* button. We'll
-   add some ``[disabled]`` attribute directives on the control buttons to reflect these
-   values.
+   button, but not the *Land* or *Abort Mission* button. In ``app.component.html``, update the control buttons
+   to add some ``[disabled]`` attribute directives.
 
-   In ``app.component.html``, update the control buttons:
-
-   .. sourcecode:: html+ng2
-      :linenos:
-
-      <div class="container-control-buttons">
-         <button (click)="handleTakeOff()" [disabled]="!takeOffEnabled">Take Off</button>
-         <button (click)="handleLand(rocketImage)" [disabled]="takeOffEnabled">Land</button>
-         <button (click)="handleMissionAbort(rocketImage)" [disabled]="takeOffEnabled">Abort Mission</button>
-      </div>
-
-   Now, based on the boolean ``takeOffEnabled``, only the *Take Off* control button is
+   Based on the boolean ``takeOffEnabled`` property, only the *Take Off* control button is
    enabled when the rocket is on the ground.
 
    Update the control button click handlers to toggle the enabled/disabled status
@@ -232,15 +207,7 @@ New Requirements
    we can take advantage of our old friend ``*ngIf`` to display the whole set based on
    ``takeOffEnabled``.
 
-   .. sourcecode:: html+ng2
-      :linenos:
-
-      <div *ngIf="!takeOffEnabled">
-         <button (click)="moveRocket(rocketImage, 'up')">Up</button>
-         <button (click)="moveRocket(rocketImage, 'down')">Down</button>
-         <button (click)="moveRocket(rocketImage, 'right')">Right</button>
-         <button (click)="moveRocket(rocketImage, 'left')">Left</button>
-      </div>
+   :ref:`Check your solution <angular-lsn3-exercise-solutionsD3>`.
 
 #. Lastly, let's change the shuttle's background color to a warning color if the rocket 
    image gets too close to the edge. Add a function to your component that will check the 
